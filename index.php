@@ -6,7 +6,12 @@ include 'header.php';
 
 <body>
 
-   <nav class="navbar">
+  <div class="loader_bg">
+    <div class="loader">
+    </div>
+  </div>
+
+  <nav class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
         <a href="#" class="nav-link">
@@ -151,11 +156,34 @@ include 'header.php';
     </ul>
   </nav>
 
+  <div class="container">
+    <div class="Profile">
+      <div class="content">
+        <h2>Profile</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="Portfolio">
+      <div class="content">
+        <h2>Portfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="Works">
+      <div class="content">
+        <h2>Works</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="Contact">
+      <div class="content">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+  </div>
 
-
-
-
-    <a href="#" class="float" id="menu-share">
+  <a href="#" class="float" id="menu-share">
       <i class="fas fa-bars my-float"></i>
       </a>
        <i class="float-option">
@@ -172,5 +200,10 @@ include 'header.php';
              <i class="fab fa-github my-float"></i>
            </a></li>
       </i>
+  <script>
+        setTimeout(function(){
+          $('.loader_bg').fadeToggle();
+        },1500);
+  </script>
 
 </body>

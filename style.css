@@ -1,3 +1,40 @@
+/*Preloader Requirements*/
+.loader_bg{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999999;
+  background: #000;
+}
+
+.loader{
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+
+.loader:before, .loader:after{
+  content: '';
+  border: 1em solid #FF0000;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader:before{
+  animation-delay: .5s;
+}
+
+/*universal values*/
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
@@ -6,20 +43,21 @@
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
+  --gradient-color: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
 }
 
 
 body{
 font-family:Verdana, Geneva, sans-serif;
 font-size:12px;
-background: linear-gradient(-45deg,#0f0c29, #302b63, #24243e);
+background: var(--gradient-color);
 background-size: 400% 400%;
 animation: gradient 15s ease infinite;
 margin: 0;
 padding: 0;
 }
 
-
+/*scrollbar modification*/
 
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -32,6 +70,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
+
+/*Navbar*/
 
 .navbar {
   position: fixed;
@@ -156,8 +196,8 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
   }
 
-  main {
-    margin: 0;
+  .container {
+    margin: auto;
   }
 }
 
@@ -193,6 +233,7 @@ body::-webkit-scrollbar-thumb {
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --gradient-color: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
 }
 
 .light {
@@ -200,13 +241,15 @@ body::-webkit-scrollbar-thumb {
   --text-secondary: #000000;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
+  --gradient-color: linear-gradient(-45deg, #ffffff, #3c0979, #e4e4e4);
 }
 
 .solar {
   --text-primary: #576e75;
   --text-secondary: #35535c;
-  --bg-primary: #fdf6e3;
+  --bg-primary: #fff380;
   --bg-secondary: #f5e5b8;
+  --gradient-color: linear-gradient(-45deg, #fdf6e3, #9f5903, #f5e5b8);
 }
 
 .theme-icon {
@@ -224,8 +267,6 @@ body::-webkit-scrollbar-thumb {
 .solar #solarIcon {
   display: block;
 }
-
-
 
 .label-container{
 position:fixed;
@@ -250,6 +291,17 @@ vertical-align:middle;
 color:#333;
 opacity:0.5;
 }
+
+/*Sections Of Page*/
+
+.container{
+  position:inherit;
+  margin-left: 5rem;
+  padding: 1rem;
+  color: var(--text-primary);
+}
+
+/*Floating Bars*/
 
 .float{
 position:fixed;
@@ -345,4 +397,19 @@ animation: rotate-out 0.5s;
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@keyframes loader {
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: inherit;
+  }
+
 }
