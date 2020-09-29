@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 /*Preloader Requirements*/
 .loader_bg{
   position: fixed;
@@ -52,7 +55,7 @@ font-family:Verdana, Geneva, sans-serif;
 font-size:12px;
 background: var(--gradient-color);
 background-size: 400% 400%;
-animation: gradient 15s ease infinite;
+animation: gradient 10s ease infinite;
 margin: 0;
 padding: 0;
 }
@@ -64,11 +67,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: var(--bg-secondary);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: #23232e;
 }
 
 /*Navbar*/
@@ -228,12 +231,14 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+/*Themes*/
+
 .dark {
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --gradient-color: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
+  --gradient-color: linear-gradient(-45deg, #0f0c29, #3C133B, #1d2671);
 }
 
 .light {
@@ -241,7 +246,7 @@ body::-webkit-scrollbar-thumb {
   --text-secondary: #000000;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
-  --gradient-color: linear-gradient(-45deg, #ffffff, #3c0979, #e4e4e4);
+  --gradient-color: linear-gradient(-45deg, #ffffff, #EB9FE9, #e4e4e4);
 }
 
 .solar {
@@ -249,7 +254,7 @@ body::-webkit-scrollbar-thumb {
   --text-secondary: #35535c;
   --bg-primary: #fff380;
   --bg-secondary: #f5e5b8;
-  --gradient-color: linear-gradient(-45deg, #fdf6e3, #9f5903, #f5e5b8);
+  --gradient-color: linear-gradient(-45deg, #22c1c3, #fdbb2d);
 }
 
 .theme-icon {
@@ -295,10 +300,124 @@ opacity:0.5;
 /*Sections Of Page*/
 
 .container{
-  position:inherit;
+  position: inherit;
   margin-left: 5rem;
   padding: 1rem;
   color: var(--text-primary);
+  height: 100%;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container .Profile{
+  position: inherit;
+  max-width: 100%;
+  height: 100%;
+  overflow: auto;
+
+}
+
+h2{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 3em;
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+h2[data-scroll="in"]{
+  transform: scaleX(1);
+}
+
+h2:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e02bff;
+  transform-origin: right;
+  transition: 0.5s;
+}
+
+h2[data-scroll="in"]:before{
+  transform: scaleX(0);
+  transition-delay: 0.5s:
+}
+
+ h3{
+  position: relative;
+  margin: 50px 0 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 2em;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+
+h3[data-scroll="in"]{
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+
+h3:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffe3b3;
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+h3[data-scroll="in"]:before{
+  transform: scaleX(0);
+  transition-delay: 1s;
+}
+
+p{
+  font-size: 1.2em;
+  transition: 1s;
+  opacity: 0;
+}
+
+p[data-scroll="in"]{
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+.container .Portfolio{
+  position: inherit;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  scroll-snap-align: start;
+}
+
+.container .Works{
+  position: inherit;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  scroll-snap-align: start;
+}
+
+.container .Contact{
+  position: inherit;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  scroll-snap-align: start;
 }
 
 /*Floating Bars*/

@@ -4,7 +4,7 @@ include 'header.php';
 
  ?>
 
-<body>
+<body  data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <div class="loader_bg">
     <div class="loader">
@@ -43,7 +43,7 @@ include 'header.php';
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="#Profile" class="nav-link">
           <i class="fas fa-user-secret fa-w-16 fa-3x"></i>
           <span class="link-text">Profile</span>
         </a>
@@ -51,7 +51,7 @@ include 'header.php';
 
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="#Portfolio" class="nav-link">
          <i class="fas fa-briefcase fa-w-16 fa-3x"></i>
           <span class="link-text">Portfolio</span>
         </a>
@@ -60,14 +60,14 @@ include 'header.php';
 
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="#Works" class="nav-link">
          <i class="fas fa-coffee fa-w-16 fa-3x"></i>
           <span class="link-text">Works</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="#Contact" class="nav-link">
           <i class="fas fa-address-card fa-w-16 fa-3x"></i>
           <span class="link-text">Contact</span>
         </a>
@@ -157,29 +157,33 @@ include 'header.php';
   </nav>
 
   <div class="container">
-    <div class="Profile">
-      <div class="content">
-        <h2>Profile</h2>
+    <div class="Profile" id="Profile">
+
+        <h2>Profile</h2><br></br>
+        <h3>You Can Find out about me in here"</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+
     </div>
-    <div class="Portfolio">
-      <div class="content">
-        <h2>Portfolio</h2>
+    <br></br>
+    <div class="Portfolio" id="Portfolio">
+        <h2>Portfolio</h2><br></br>
+          <h3>You Can Find out about me in here"</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
     </div>
-    <div class="Works">
-      <div class="content">
-        <h2>Works</h2>
+    <br></br>
+    <div class="Works" id="Works">
+
+        <h2>Works</h2><br></br>
+          <h3>You Can Find out about me in here"</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+
     </div>
-    <div class="Contact">
-      <div class="content">
-        <h2>Contact</h2>
+    <div class="Contact" id="Contact">
+
+        <h2>Contact</h2><br></br>
+          <h3>You Can Find out about me in here"</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+
     </div>
   </div>
 
@@ -200,10 +204,18 @@ include 'header.php';
              <i class="fab fa-github my-float"></i>
            </a></li>
       </i>
+
+
+
   <script>
         setTimeout(function(){
           $('.loader_bg').fadeToggle();
         },1500);
+  </script>
+  <script type="text/javascript">
+  ScrollOut({
+    targets: 'h2,h3,p'
+  })
   </script>
 
 </body>
